@@ -1,4 +1,4 @@
-FROM root:latest AS server
+FROM drain-server:latest AS server
 
 RUN apt-get update && apt-get install -y openjdk-21-jdk
 

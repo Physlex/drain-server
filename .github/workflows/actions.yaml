@@ -1,0 +1,24 @@
+name: "Build and test action for drain mod integrations"
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build mod integrations
+        run: |
+          ./gradlew build
+
+      - name: Test Orchestration
+        run: |
+          docker compose up --build -d
+    
+      - name: Close orechestration
+        run: |
+          docker compose down -v
