@@ -1,5 +1,5 @@
 rootProject.name = "drain-server"
-include("src-server")
+include("src-mod")
 
 pluginManagement {
     repositories {

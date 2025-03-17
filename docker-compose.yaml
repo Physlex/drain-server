@@ -1,0 +1,15 @@
+services:
+  # Build and run the fabric server launcher
+  server:
+    build:
+      context: .
+      dockerfile: ./src-server/Dockerfile
+    ports:
+      - 25565:25565
+  # Build the drain mod
+  # mod:
+  #   depends_on:
+  #     - server
+  #   build:
+  #     context: .
+  #     dockerfile: ./src-mod/Dockerfile
