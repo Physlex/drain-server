@@ -1,4 +1,4 @@
-FROM drain-server:latest AS mod
+FROM drain-base:latest AS mod
 
 RUN apt-get update
 

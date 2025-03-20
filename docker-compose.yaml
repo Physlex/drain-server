@@ -1,6 +1,6 @@
 services:
   # Build and run the fabric server launcher
-  server:
+  drain:
     build:
       context: .
       dockerfile: ./src-server/Dockerfile
